@@ -1,13 +1,14 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {Text} from 'react-native';
+import {Container} from '@atomic-components/index';
 
 export interface Props {}
 
 const List: React.FC<Props> = ({}: any) => {
   return (
-    <View>
+    <Container>
       <Text>In List screen</Text>
-    </View>
+    </Container>
   );
 };
 
