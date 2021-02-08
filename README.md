@@ -34,7 +34,19 @@ yarn ios
 ```sh
 yarn test
 ```
+### Download android debug apk
+You can download android debug apk:
+https://drive.google.com/file/d/1JQZisqUAOUf80gGqnPWG2SSscH0pu6Ey/view?usp=sharing
 
+### Test Result
+![UnitTests](https://github.com/majidln/StartWarHammer/blob/main/screenshots/star_war_test.png?raw=true)
 
 
 ### Screenshots
+
+![Home](https://github.com/majidln/StartWarHammer/blob/main/screenshots/list.jpeg?raw=true)
+
+![List](https://github.com/majidln/StartWarHammer/blob/main/screenshots/filter.jpeg?raw=true)
+
+![Detail](https://github.com/majidln/StartWarHammer/blob/main/screenshots/detail.jpeg?raw=true)
+
