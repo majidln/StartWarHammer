@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.29% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/14</span>
+                <span class='fraction'>12/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>9/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.29% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/14</span>
+                <span class='fraction'>12/14</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -131,29 +131,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -188,33 +188,33 @@ interface Props {}
 &nbsp;
 const Detail: React.FC&lt;Props&gt; = ({}: any) =&gt; {
   const route: DetailScreenRouteProp = useRoute();
-  const {item}: {item: Entity} = <span class="cstat-no" title="statement not covered" >route.params;</span>
+  const {item}: {item: Entity} = route.params;
 &nbsp;
   // console.log('item is', item);
-  const {data, error, loading}: any = <span class="cstat-no" title="statement not covered" >useGetDetail(</span>
+  const {data, error, loading}: any = useGetDetail(
     {id: item.id},
     item.__typename,
   );
   // console.log('in detail', data, error, loading);
 &nbsp;
-  const renderDetail = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    console.log('type', item.__typename);</span>
-<span class="cstat-no" title="statement not covered" >    if (item.__typename === 'Person') {</span>
-<span class="cstat-no" title="statement not covered" >      return &lt;PersonItem person={data.person} /&gt;;</span>
-    } else <span class="cstat-no" title="statement not covered" >if (item.__typename === 'Planet') {</span>
+  const renderDetail = () =&gt; {
+    console.log('type', item.__typename);
+    if (item.__typename === 'Person') {
+      return &lt;PersonItem person={data.person} /&gt;;
+    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (item.__typename === 'Planet') {
 <span class="cstat-no" title="statement not covered" >      return &lt;PlanetItem planet={data.planet} /&gt;;</span>
-    } else <span class="cstat-no" title="statement not covered" >if (item.__typename === 'Starship') {</span>
-<span class="cstat-no" title="statement not covered" >      return &lt;StarshipItem starship={data.starship} /&gt;;</span>
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (item.__typename === 'Starship') {
+      return &lt;StarshipItem starship={data.starship} /&gt;;
     }
 <span class="cstat-no" title="statement not covered" >    return null;</span>
   };
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;Container&gt;
       &lt;Item item={item} isDetail={true}&gt;
         &lt;View&gt;
           {loading &amp;&amp; &lt;Text testID="detailLoadingId"&gt;Loading...&lt;/Text&gt;}
           {data &amp;&amp; &lt;View testID="typeDetailId"&gt;{renderDetail()}&lt;/View&gt;}
-          {error &amp;&amp; &lt;View testID="detailErrorId"&gt;An Error Occurred&lt;/View&gt;}
+          {error &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;View testID="detailErrorId"&gt;An Error Occurred&lt;/View&gt;}</span>
         &lt;/View&gt;
       &lt;/Item&gt;
     &lt;/Container&gt;
@@ -229,7 +229,7 @@ export default Detail;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Feb 08 2021 20:27:26 GMT+0330 (Iran Standard Time)
+                at Mon Feb 08 2021 20:28:03 GMT+0330 (Iran Standard Time)
             </div>
         </div>
         <script src="../../../prettify.js"></script>
