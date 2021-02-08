@@ -8,7 +8,7 @@ interface Props {
 
 export const PersonItem: React.FC<Props> = ({person}: any) => {
   return (
-    <View>
+    <View testID="personItem">
       <Text>In person item</Text>
       <Text>{JSON.stringify(person)}</Text>
     </View>

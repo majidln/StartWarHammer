@@ -22,8 +22,8 @@ export interface Starship extends Entity {
 export interface Person extends Entity {
   height?: Number;
   mass?: Number;
-  homeworld: World;
-  films: Array<Film>;
+  homeworld?: World;
+  films?: Array<Film>;
 }
 export interface Planet extends Entity {
   population?: Number;

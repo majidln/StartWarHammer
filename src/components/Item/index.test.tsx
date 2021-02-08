@@ -18,6 +18,13 @@ const itemPerson: Entity = {
   __typename: 'Person',
 };
 
+it('Item Snapshot renders correctly', () => {
+  const tree = renderer
+    .create(<Item item={itemStarship} isDetail={false} />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
 it('Item render in list correctly', async () => {
   const {findByTestId} = render(<Item item={itemStarship} isDetail={false} />);
 

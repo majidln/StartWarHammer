@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/Container/index.tsx</title>
+    <title>Code coverage report for src/components/PlanetItem/index.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/Container</a> index.tsx</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/PlanetItem</a> index.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -77,8 +77,8 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -93,32 +93,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import {Planet} from '@services/interfaces';
 &nbsp;
-export interface Props {
-  style?: Object;
+interface Props {
+  planet: Planet;
 }
 &nbsp;
-export const Container: React.FC&lt;Props&gt; = ({children, style, ...rest}: any) =&gt; {
+export const PlanetItem: React.FC&lt;Props&gt; = ({planet, ...rest}: any) =&gt; {
   return (
-    &lt;SafeAreaView style={{...styles.wrapper, ...style}} {...rest}&gt;
-      {children}
-    &lt;/SafeAreaView&gt;
+    &lt;View testID="planetItem"&gt;
+      &lt;Text&gt;In PlantItem&lt;/Text&gt;
+      &lt;Text&gt;{JSON.stringify(planet)}&lt;/Text&gt;
+    &lt;/View&gt;
   );
 };
 &nbsp;
 const styles = StyleSheet.create({
-  wrapper: {
-    backgroundColor: '#fff',
-    flex: 1,
-  },
+  wrapper: {},
 });
 &nbsp;</pre></td></tr></table></pre>
 

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Planet Item Snapshot renders correctly 1`] = `
+<View
+  testID="planetItem"
+>
+  <Text>
+    In PlantItem
+  </Text>
+  <Text>
+    {"name":"Alderaan","id":"cj0o7m30ms0gk01726hgbrd0s","population":2000000000,"gravity":"1 standard","__typename":"Planet"}
+  </Text>
+</View>
+`;

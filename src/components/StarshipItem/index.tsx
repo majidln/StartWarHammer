@@ -8,7 +8,7 @@ interface Props {
 
 export const StarshipItem: React.FC<Props> = ({starship, ...rest}: any) => {
   return (
-    <View>
+    <View testID="starshipId">
       <Text>In starship item</Text>
       <Text>{JSON.stringify(starship)}</Text>
     </View>
