@@ -54,7 +54,7 @@ const List: React.FC<Props> = ({}: any) => {
         style={styles.searchInput}
         value={search}
         onChangeText={(text) => setSearch(text)}
-        placeholder="Search name"
+        placeholder="Search all"
       />
       {data && (
         <SectionList
