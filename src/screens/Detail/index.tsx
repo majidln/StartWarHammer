@@ -1,25 +1,32 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {Text, View} from 'react-native';
 import {useRoute} from '@react-navigation/native';
 import {Entity} from '@services/interfaces';
 import {useGetDetail} from '@hooks/index';
-import Item from '@src/components/Item/index';
-import PersonItem from '@src/components/PersonItem/index';
-import PlanetItem from '@src/components/PlanetItem/index';
-import StarshipItem from '@src/components/StarshipItem/index';
+import {RouteProp} from '@react-navigation/native';
+import {RootStackParamList} from '@navigation/index';
+import {
+  Container,
+  Item,
+  PersonItem,
+  PlanetItem,
+  StarshipItem,
+} from '@components/index';
+
+type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Detail'>;
 
 interface Props {}
 
 const Detail: React.FC<Props> = ({}: any) => {
-  const route = useRoute();
+  const route: DetailScreenRouteProp = useRoute();
   const {item}: {item: Entity} = route.params;
 
-  console.log('item is', item);
+  // console.log('item is', item);
   const {data, error, loading}: any = useGetDetail(
     {id: item.id},
     item.__typename,
   );
-  console.log('in detail', data, error, loading);
+  // console.log('in detail', data, error, loading);
 
   const renderDetail = () => {
     console.log('type', item.__typename);
@@ -33,11 +40,15 @@ const Detail: React.FC<Props> = ({}: any) => {
     return null;
   };
   return (
-    <View>
+    <Container>
       <Item item={item} isDetail={true}>
-        {data && renderDetail()}
+        <View>
+          {loading && <Text testID="detailLoadingId">Loading...</Text>}
+          {data && <View testID="typeDetailId">{renderDetail()}</View>}
+          {error && <View testID="detailErrorId">An Error Occurred</View>}
+        </View>
       </Item>
-    </View>
+    </Container>
   );
 };
 

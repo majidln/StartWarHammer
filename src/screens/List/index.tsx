@@ -25,14 +25,12 @@ const List: React.FC<Props> = ({}: any) => {
     error: Object | undefined;
     loading: Boolean;
     refetch: Function;
-  } = useGetList({
-    variables: {search},
-  });
+  } = useGetList({search});
   console.log('in list', data, error, loading);
 
   const renderLoading = () => {
     return (
-      <View style={styles.loadingWrapper}>
+      <View style={styles.loadingWrapper} testID="listLoadingID">
         <ActivityIndicator size="large" color="#00ff00" />
       </View>
     );
@@ -62,6 +60,7 @@ const List: React.FC<Props> = ({}: any) => {
       />
       {data && (
         <SectionList
+          testID="listID"
           style={styles.list}
           sections={getSections()}
           renderItem={({item}: {item: Entity}) => <Item item={item} />}

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/services/translate.tsx</title>
+    <title>Code coverage report for src/navigation/index.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/services</a> translate.tsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/navigation</a> index.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/6</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
+                <span class="quiet">Branches</span>
                 <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -74,40 +74,88 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import I18n from 'i18n-js';
-import * as RNLocalize from 'react-native-localize';
-import en from '@assets/locales/en';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import * as React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {useTheme} from '@react-navigation/native';
+import ListScreen from '@screens/List/index';
+import DetailScreen from '@screens/Detail/index';
+import {Entity} from '@services/interfaces';
 &nbsp;
-const locales = RNLocalize.getLocales();
-&nbsp;
-<span class="missing-if-branch" title="else path not taken" >E</span>if (Array.isArray(locales)) {
-  I18n.locale = locales[0].languageTag;
-}
-&nbsp;
-I18n.fallbacks = true;
-I18n.missingBehaviour = 'guess';
-I18n.translations = {
-  en,
+export type RootStackParamList = {
+  List: undefined;
+  Detail: {item: Entity};
 };
 &nbsp;
-export default I18n;
+const Stack = createStackNavigator&lt;RootStackParamList&gt;();
+&nbsp;
+function MainNavigation() {
+  const {colors} = useTheme();
+  return (
+    &lt;Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: colors.primary,
+          elevation: 0, // remove shadow on Android
+          shadowOpacity: 0, // remove shadow on iOS
+        },
+        headerTintColor: '#fff',
+      }}&gt;
+      &lt;Stack.Screen name="List" component={ListScreen} /&gt;
+      &lt;Stack.Screen name="Detail" component={DetailScreen} /&gt;
+    &lt;/Stack.Navigator&gt;
+  );
+}
+&nbsp;
+export default MainNavigation;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -115,7 +163,7 @@ export default I18n;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Feb 08 2021 19:51:32 GMT+0330 (Iran Standard Time)
+                at Mon Feb 08 2021 18:14:20 GMT+0330 (Iran Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

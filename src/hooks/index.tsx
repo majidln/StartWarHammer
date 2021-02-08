@@ -1,6 +1,6 @@
 import {gql, useQuery} from '@apollo/client';
 
-const GET_LIST = gql`
+export const GET_LIST = gql`
   query getItems($search: String) {
     starships(where: {_search: $search}, orderBy: name_ASC) {
       id
@@ -32,7 +32,7 @@ const GET_STARSHIP_DETAIL = gql`
   }
 `;
 
-const GET_PERSON_DETAIL = gql`
+export const GET_PERSON_DETAIL = gql`
   query getStarshipDetail($id: ID) {
     person(where: {id: $id}) {
       id
@@ -51,11 +51,11 @@ const GET_PERSON_DETAIL = gql`
   }
 `;
 
-const GET_PLANET_DETAIL = gql`
+export const GET_PLANET_DETAIL = gql`
   query getStarshipDetail($id: ID) {
     planet(where: {id: $id}) {
-      name
       id
+      name
       population
       gravity
     }
