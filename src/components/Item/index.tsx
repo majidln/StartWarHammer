@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 20,
     fontWeight: '700',
-    fontFamily: 'StarJedi',
+    // fontFamily: 'StarJedi',
   },
   type: {
     fontSize: 16,

@@ -87,6 +87,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     borderRadius: 8,
     fontSize: 18,
+    height: 50,
+    backgroundColor: '#fff',
+    paddingHorizontal: 8,
   },
   list: {flex: 1},
   header: {
