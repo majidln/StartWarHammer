@@ -5,18 +5,18 @@ import {MockedProvider} from '@apollo/client/testing';
 import Detail from './index';
 import {GET_PLANET_DETAIL} from '@hooks/index';
 
-// jest.mock('@react-navigation/native', () => ({
-//   useNavigation: () => ({goBack: jest.fn(), navigate: jest.fn()}),
-//   useRoute: () => ({
-//     params: {
-//       item: {
-//         name: 'Alderaan',
-//         id: 'cj0o7m30ms0gk01726hgbrd0s',
-//         __typename: 'Planet',
-//       },
-//     },
-//   }),
-// }));
+jest.mock('@react-navigation/native', () => ({
+  useNavigation: () => ({goBack: jest.fn(), navigate: jest.fn()}),
+  useRoute: () => ({
+    params: {
+      item: {
+        id: 'cj0o7m30ms0gk01726hgbrd0s',
+        name: 'Alderaan',
+        __typename: 'Planet',
+      },
+    },
+  }),
+}));
 
 describe('Detail render component as Planet', () => {
   const mocks = [

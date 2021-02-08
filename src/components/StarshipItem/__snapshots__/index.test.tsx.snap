@@ -4,11 +4,110 @@ exports[`Starship Item Snapshot renders correctly 1`] = `
 <View
   testID="starshipId"
 >
-  <Text>
-    In starship item
-  </Text>
-  <Text>
-    {"name":"A-wing","id":"cj0nwtqudq53b0114s5id3anc","crew":1,"length":9.6,"films":[{"id":"cj0nxmy5ega600114uiw05wle","title":"Return of the Jedi"}],"__typename":"Starship"}
-  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Crew:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      1
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Length:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      9.6
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Exist in:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Return of the Jedi
+    </Text>
+  </View>
 </View>
 `;

@@ -8,7 +8,7 @@ export interface Props {
 
 export const KeyValue: React.FC<Props> = ({title, value}: any) => {
   return (
-    <View style={styles.wrapper}>
+    <View style={styles.wrapper} testID="keyValueId">
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.value}>{value}</Text>
     </View>

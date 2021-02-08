@@ -5,7 +5,7 @@ exports[`Container Snapshot renders correctly 1`] = `
   emulateUnlessSupported={true}
   style={
     Object {
-      "backgroundColor": "#fff",
+      "backgroundColor": "#ecf0f1",
       "flex": 1,
     }
   }

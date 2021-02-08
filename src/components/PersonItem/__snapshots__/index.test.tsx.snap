@@ -2,13 +2,151 @@
 
 exports[`Person Item Snapshot renders correctly 1`] = `
 <View
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+    }
+  }
   testID="personItem"
 >
-  <Text>
-    In person item
-  </Text>
-  <Text>
-    {"id":"cj0nv9phmewhy0130he5s0k5r","name":"Ackbar","height":180,"mass":83,"films":[{"id":"cj0nxmy5ega600114uiw05wle","title":"Return of the Jedi"},{"id":"cj0nxmy69ga640114e3eb7bn2","title":"The Force Awakens"}],"__typename":"Person"}
-  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Height:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      180
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Mass:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      83
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Home World:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Play in:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Return of the Jedi, The Force Awakens
+    </Text>
+  </View>
 </View>
 `;

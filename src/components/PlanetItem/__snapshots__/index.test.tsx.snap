@@ -4,11 +4,75 @@ exports[`Planet Item Snapshot renders correctly 1`] = `
 <View
   testID="planetItem"
 >
-  <Text>
-    In PlantItem
-  </Text>
-  <Text>
-    {"name":"Alderaan","id":"cj0o7m30ms0gk01726hgbrd0s","population":2000000000,"gravity":"1 standard","__typename":"Planet"}
-  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Population:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      2000000000
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Gravity:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      1 standard
+    </Text>
+  </View>
 </View>
 `;
