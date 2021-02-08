@@ -9,7 +9,12 @@ interface Props {
   isDetail?: Boolean;
 }
 
-const Item: React.FC<Props> = ({item, isDetail, children, ...rest}: any) => {
+export const Item: React.FC<Props> = ({
+  item,
+  isDetail,
+  children,
+  ...rest
+}: any) => {
   const navigation = useNavigation();
   const btnPress = () => {
     if (isDetail) {
@@ -59,5 +64,3 @@ const styles = StyleSheet.create({
     color: 'red',
   },
 });
-
-export default Item;

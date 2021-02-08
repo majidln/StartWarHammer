@@ -6,7 +6,7 @@ interface Props {
   planet: Planet;
 }
 
-const PlanetItem: React.FC<Props> = ({planet, ...rest}: any) => {
+export const PlanetItem: React.FC<Props> = ({planet, ...rest}: any) => {
   return (
     <View>
       <Text>In PlantItem</Text>
@@ -18,5 +18,3 @@ const PlanetItem: React.FC<Props> = ({planet, ...rest}: any) => {
 const styles = StyleSheet.create({
   wrapper: {},
 });
-
-export default PlanetItem;

@@ -6,7 +6,7 @@ interface Props {
   starship: Starship;
 }
 
-const StarshipItem: React.FC<Props> = ({starship, ...rest}: any) => {
+export const StarshipItem: React.FC<Props> = ({starship, ...rest}: any) => {
   return (
     <View>
       <Text>In starship item</Text>
@@ -18,5 +18,3 @@ const StarshipItem: React.FC<Props> = ({starship, ...rest}: any) => {
 const styles = StyleSheet.create({
   wrapper: {},
 });
-
-export default StarshipItem;

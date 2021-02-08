@@ -7,10 +7,9 @@ import {
   TextInput,
   Text,
 } from 'react-native';
-import {Container} from '@atomic-components/index';
+import {Container, Item} from '@components/index';
 import {useGetList} from '@hooks/index';
 import {ResponsePage, Entity} from '@services/interfaces';
-import Item from '@src/components/Item/index';
 
 interface Props {}
 

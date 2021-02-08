@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import {Person} from '@services/interfaces';
 
 interface Props {
   person: Person;
 }
 
-const PersonItem: React.FC<Props> = ({person, ...rest}: any) => {
+export const PersonItem: React.FC<Props> = ({person}: any) => {
   return (
     <View>
       <Text>In person item</Text>
@@ -18,5 +18,3 @@ const PersonItem: React.FC<Props> = ({person, ...rest}: any) => {
 const styles = StyleSheet.create({
   wrapper: {},
 });
-
-export default PersonItem;
