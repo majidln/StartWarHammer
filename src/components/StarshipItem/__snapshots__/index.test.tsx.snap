@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Starship Item Snapshot renders correctly 1`] = `
+<View
+  testID="starshipId"
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Crew:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      1
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Length:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      9.6
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+        "marginVertical": 4,
+        "width": "100%",
+      }
+    }
+    testID="keyValueId"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#2c3e50",
+          "fontSize": 18,
+          "paddingRight": 4,
+        }
+      }
+    >
+      Exist in:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Return of the Jedi
+    </Text>
+  </View>
+</View>
+`;

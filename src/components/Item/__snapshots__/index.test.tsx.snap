@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item Snapshot renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderRadius": 10,
+      "margin": 8,
+      "padding": 10,
+      "paddingBottom": 30,
+    }
+  }
+  testID="itemID"
+>
+  <Text
+    style={
+      Object {
+        "fontFamily": "StarJedi",
+        "fontSize": 20,
+        "fontWeight": "700",
+      }
+    }
+  >
+    A-wing
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 16,
+        "fontWeight": "400",
+      }
+    }
+  >
+    Type: 
+    Starship
+  </Text>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "bottom": 0,
+        "opacity": 1,
+        "padding": 8,
+        "position": "absolute",
+        "right": 0,
+      }
+    }
+    testID="itemBtn"
+  >
+    <Text
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+      Show Detail
+    </Text>
+  </View>
+</View>
+`;
