@@ -1,6 +1,17 @@
 module.exports = {
   root: true,
   extends: '@react-native-community',
+  plugins: ['detox', 'jest'],
+  overrides: [
+    {
+      files: ['*.e2e.js', "**/*.test.js", './jestSetup.js'],
+      env: {
+        'detox/detox': true,
+        jest: true,
+        'jest/globals': true,
+      },
+    },
+  ],
   settings: {
     "import/resolver": {
       "node": {

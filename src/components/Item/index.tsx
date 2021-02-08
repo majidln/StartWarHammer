@@ -24,11 +24,11 @@ export const Item: React.FC<Props> = ({
     }
   };
   return (
-    <View style={{...styles.wrapper, ...rest.style}} {...rest}>
+    <View style={{...styles.wrapper, ...rest.style}} {...rest} testID="itemID">
       <Text style={styles.name}>{item.name}</Text>
       <Text style={styles.type}>Type: {item.__typename}</Text>
       {children}
-      <TouchableOpacity style={styles.btn} onPress={btnPress}>
+      <TouchableOpacity style={styles.btn} onPress={btnPress} testID="itemBtn">
         <Text
           style={{...styles.btnText, ...{color: isDetail ? 'blue' : 'red'}}}>
           {t.t(`item.${isDetail ? 'backToList' : 'goToDetail'}`)}

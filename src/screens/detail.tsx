@@ -27,9 +27,10 @@ const Detail: React.FC<Props> = ({}: any) => {
       return <PersonItem person={data.person} />;
     } else if (item.__typename === 'Planet') {
       return <PlanetItem planet={data.planet} />;
-    } else {
+    } else if (item.__typename === 'Starship') {
       return <StarshipItem starship={data.starship} />;
     }
+    return null;
   };
   return (
     <View>
