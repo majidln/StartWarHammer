@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Starship Item Snapshot renders correctly 1`] = `
+<View
+  testID="starshipId"
+>
+  <Text>
+    In starship item
+  </Text>
+  <Text>
+    {"name":"A-wing","id":"cj0nwtqudq53b0114s5id3anc","crew":1,"length":9.6,"films":[{"id":"cj0nxmy5ega600114uiw05wle","title":"Return of the Jedi"}],"__typename":"Starship"}
+  </Text>
+</View>
+`;
