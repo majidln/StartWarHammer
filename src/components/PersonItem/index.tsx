@@ -1,6 +1,8 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import {Person} from '@services/interfaces';
+import {View, StyleSheet} from 'react-native';
+import {KeyValue} from './../index';
+import {Person, Film} from '@services/interfaces';
+import t from '@services/translate';
 
 interface Props {
   person: Person;
@@ -8,13 +10,28 @@ interface Props {
 
 export const PersonItem: React.FC<Props> = ({person}: any) => {
   return (
-    <View testID="personItem">
-      <Text>In person item</Text>
-      <Text>{JSON.stringify(person)}</Text>
+    <View testID="personItem" style={styles.wrapper}>
+      {person.height && (
+        <KeyValue title={t.t('person.height')} value={person.height} />
+      )}
+      {person.mass && (
+        <KeyValue title={t.t('person.mass')} value={person.mass} />
+      )}
+      <KeyValue
+        title={t.t('person.homeworld')}
+        value={person?.homeworld?.name}
+      />
+      <KeyValue
+        title={t.t('person.film')}
+        value={person.films.map((film: Film) => film.title).join(', ')}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  wrapper: {},
+  wrapper: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

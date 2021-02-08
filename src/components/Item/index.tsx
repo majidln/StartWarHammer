@@ -24,7 +24,13 @@ export const Item: React.FC<Props> = ({
     }
   };
   return (
-    <View style={{...styles.wrapper, ...rest.style}} {...rest} testID="itemID">
+    <View
+      style={{
+        ...styles.wrapper,
+        ...rest.style,
+      }}
+      {...rest}
+      testID="itemID">
       <Text style={styles.name}>{item.name}</Text>
       <Text style={styles.type}>Type: {item.__typename}</Text>
       {children}
@@ -41,10 +47,10 @@ export const Item: React.FC<Props> = ({
 const styles = StyleSheet.create({
   wrapper: {
     margin: 8,
-    borderWidth: 1,
-    borderColor: 'blue',
     borderRadius: 10,
     padding: 10,
+    paddingBottom: 30,
+    backgroundColor: '#fff',
   },
   name: {
     fontSize: 20,
@@ -59,7 +65,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
     bottom: 0,
-    padding: 4,
+    padding: 8,
   },
   btnText: {
     color: 'red',

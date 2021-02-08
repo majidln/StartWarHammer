@@ -15,7 +15,7 @@ export const Container: React.FC<Props> = ({children, style, ...rest}: any) => {
 
 const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: '#fff',
+    backgroundColor: '#ecf0f1',
     flex: 1,
   },
 });

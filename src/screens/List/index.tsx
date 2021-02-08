@@ -26,18 +26,16 @@ const List: React.FC<Props> = ({}: any) => {
     loading: Boolean;
     refetch: Function;
   } = useGetList({search});
-  console.log('in list', data, error, loading);
 
   const renderLoading = () => {
     return (
       <View style={styles.loadingWrapper} testID="listLoadingID">
-        <ActivityIndicator size="large" color="#00ff00" />
+        <ActivityIndicator size="large" color={'#3498db'} />
       </View>
     );
   };
 
   React.useEffect(() => {
-    console.log('search', search);
     refetch({search});
   }, [search, refetch]);
 
@@ -92,8 +90,7 @@ const styles = StyleSheet.create({
   },
   list: {flex: 1},
   header: {
-    fontSize: 32,
-    backgroundColor: '#fff',
+    fontSize: 26,
   },
 });
 

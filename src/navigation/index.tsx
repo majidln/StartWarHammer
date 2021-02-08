@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {useTheme} from '@react-navigation/native';
 import ListScreen from '@screens/List/index';
 import DetailScreen from '@screens/Detail/index';
 import {Entity} from '@services/interfaces';
@@ -13,12 +12,11 @@ export type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 function MainNavigation() {
-  const {colors} = useTheme();
   return (
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: colors.primary,
+          backgroundColor: '#27ae60',
           elevation: 0, // remove shadow on Android
           shadowOpacity: 0, // remove shadow on iOS
         },
