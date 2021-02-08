@@ -9,16 +9,27 @@ import {
 } from 'react-native';
 import {Container} from '@atomic-components/index';
 import {useGetList} from '@hooks/index';
-import {QueryResponse, Entity} from '@services/interfaces';
+import {ResponsePage, Entity} from '@services/interfaces';
 import Item from '@src/components/Item/index';
 
-export interface Props {}
+interface Props {}
 
 const List: React.FC<Props> = ({}: any) => {
   const [search, setSearch] = React.useState('');
-  const {data, error, loading, refetch}: QueryResponse = useGetList({
+  const {
+    data,
+    error,
+    loading,
+    refetch,
+  }: {
+    data: ResponsePage | undefined;
+    error: Object | undefined;
+    loading: Boolean;
+    refetch: Function;
+  } = useGetList({
     variables: {search},
   });
+  console.log('in list', data, error, loading);
 
   const renderLoading = () => {
     return (

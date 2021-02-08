@@ -1,18 +1,33 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {Entity} from '@services/interfaces';
+import {useNavigation} from '@react-navigation/native';
+import t from '@services/translate';
 
-export interface Props {
+interface Props {
   item: Entity;
+  isDetail: Boolean;
 }
 
-const Item: React.FC<Props> = ({item, ...rest}: any) => {
+const Item: React.FC<Props> = ({item, isDetail, children, ...rest}: any) => {
+  const navigation = useNavigation();
+  const btnPress = () => {
+    if (isDetail) {
+      navigation.goBack();
+    } else {
+      navigation.navigate('Detail', {item});
+    }
+  };
   return (
     <View style={{...styles.wrapper, ...rest.style}} {...rest}>
       <Text style={styles.name}>{item.name}</Text>
       <Text style={styles.type}>Type: {item.__typename}</Text>
-      <TouchableOpacity style={styles.btn}>
-        <Text style={styles.btnText}>Show Detail</Text>
+      {children}
+      <TouchableOpacity style={styles.btn} onPress={btnPress}>
+        <Text
+          style={{...styles.btnText, ...{color: isDetail ? 'blue' : 'red'}}}>
+          {t.t(`item.${isDetail ? 'backToList' : 'goToDetail'}`)}
+        </Text>
       </TouchableOpacity>
     </View>
   );
