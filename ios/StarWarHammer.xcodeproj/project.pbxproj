@@ -20,6 +20,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AE26CD6EA4CF893364BDACE0 /* libPods-StarWarHammer-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AF34A595DCDD0603C357AD /* libPods-StarWarHammer-tvOSTests.a */; };
 		BA6753C704C38CB314BFBA39 /* libPods-StarWarHammer-StarWarHammerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5139D6C31839FFD5B626CE1 /* libPods-StarWarHammer-StarWarHammerTests.a */; };
+		644FC5E1172D4011B6014822 /* StarJedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F10783F357649739F00DB95 /* StarJedi.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		DB0994D5E8A100B0602DE807 /* Pods-StarWarHammer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarHammer.release.xcconfig"; path = "Target Support Files/Pods-StarWarHammer/Pods-StarWarHammer.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		8F10783F357649739F00DB95 /* StarJedi.ttf */ = {isa = PBXFileReference; name = "StarJedi.ttf"; path = "../assets/fonts/StarJedi.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				4EE3E7E0719641CB8CA05970 /* Pods */,
+				BFFA5580DD134B9AA7A2922B /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +200,15 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		BFFA5580DD134B9AA7A2922B /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				8F10783F357649739F00DB95 /* StarJedi.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -342,6 +354,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				644FC5E1172D4011B6014822 /* StarJedi.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
