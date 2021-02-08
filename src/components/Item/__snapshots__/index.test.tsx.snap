@@ -16,7 +16,6 @@ exports[`Item Snapshot renders correctly 1`] = `
   <Text
     style={
       Object {
-        "fontFamily": "StarJedi",
         "fontSize": 20,
         "fontWeight": "700",
       }
