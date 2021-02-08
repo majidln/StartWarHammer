@@ -3,7 +3,7 @@ import {
   View,
   ActivityIndicator,
   StyleSheet,
-  FlatList,
+  SectionList,
   TextInput,
   Text,
 } from 'react-native';
@@ -22,7 +22,7 @@ const List: React.FC<Props> = ({}: any) => {
     loading,
     refetch,
   }: {
-    data: ResponsePage | undefined;
+    data: ResponsePage;
     error: Object | undefined;
     loading: Boolean;
     refetch: Function;
@@ -44,6 +44,15 @@ const List: React.FC<Props> = ({}: any) => {
     refetch({search});
   }, [search, refetch]);
 
+  const getSections = () => {
+    return Object.keys(data).map((item: String) => {
+      return {
+        title: item,
+        data: data[item],
+      };
+    });
+  };
+
   return (
     <Container>
       <TextInput
@@ -53,15 +62,18 @@ const List: React.FC<Props> = ({}: any) => {
         placeholder="Search name"
       />
       {data && (
-        <FlatList
-          style={{flex: 1}}
-          data={[...data.starships, ...data.persons, ...data.planets]}
+        <SectionList
+          style={styles.list}
+          sections={getSections()}
           renderItem={({item}: {item: Entity}) => <Item item={item} />}
           keyExtractor={(item, index) => index + ''}
+          renderSectionHeader={({section: {title}}) => (
+            <Text style={styles.header}>{title}</Text>
+          )}
         />
       )}
       {loading && renderLoading()}
-      {error && <Text>An error occured</Text>}
+      {error && <Text>An error occurred</Text>}
     </Container>
   );
 };
@@ -79,6 +91,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     borderRadius: 8,
     fontSize: 18,
+  },
+  list: {flex: 1},
+  header: {
+    fontSize: 32,
+    backgroundColor: '#fff',
   },
 });
 

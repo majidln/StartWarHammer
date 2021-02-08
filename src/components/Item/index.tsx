@@ -6,7 +6,7 @@ import t from '@services/translate';
 
 interface Props {
   item: Entity;
-  isDetail: Boolean;
+  isDetail?: Boolean;
 }
 
 const Item: React.FC<Props> = ({item, isDetail, children, ...rest}: any) => {

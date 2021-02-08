@@ -11,6 +11,7 @@ export interface Film {
 export interface Entity {
   id: String;
   name: String;
+  __typename: String;
 }
 
 export interface Starship extends Entity {

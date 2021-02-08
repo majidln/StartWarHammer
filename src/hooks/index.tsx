@@ -1,17 +1,16 @@
 import {gql, useQuery} from '@apollo/client';
-import {QueryResponse} from '@services/interfaces';
 
 const GET_LIST = gql`
   query getItems($search: String) {
-    starships(where: {_search: $search}) {
+    starships(where: {_search: $search}, orderBy: name_ASC) {
       id
       name
     }
-    persons(where: {_search: $search}) {
+    persons(where: {_search: $search}, orderBy: name_ASC) {
       id
       name
     }
-    planets(where: {_search: $search}) {
+    planets(where: {_search: $search}, orderBy: name_ASC) {
       id
       name
     }
