@@ -1,2 +1,1 @@
-export const BASE_URL = 'https://ddapi.production.dietdoctor.com/v1';
-export const IMAGE_URL = 'https://i.dietdoctor.com';
+export const BASE_URL = 'https://api-euwest.graphcms.com/v1/ck5wca13qc9ux01fgaidt12m4/master';
