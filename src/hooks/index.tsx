@@ -1,22 +1,26 @@
 import {gql, useQuery} from '@apollo/client';
 
 const GET_LIST = gql`
-  query {
-    starships {
+  query getItems($search: String) {
+    starships(where: {_search: $search}) {
       id
       name
     }
-    persons {
+    persons(where: {_search: $search}) {
       id
       name
     }
-    planets {
+    planets(where: {_search: $search}) {
       id
       name
     }
   }
 `;
 
-export const useGetList = (): any | undefined => {
-  return useQuery(GET_LIST, {});
+export const useGetList = (
+  variables: Object = {search: ''},
+): any | undefined => {
+  return useQuery(GET_LIST, {
+    variables,
+  });
 };

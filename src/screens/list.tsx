@@ -5,6 +5,7 @@ import {
   StyleSheet,
   FlatList,
   TextInput,
+  Text,
 } from 'react-native';
 import {Container} from '@atomic-components/index';
 import {useGetList} from '@hooks/index';
@@ -14,8 +15,10 @@ import Item from '@src/components/Item/index';
 export interface Props {}
 
 const List: React.FC<Props> = ({}: any) => {
-  const {data, error, loading}: QueryResponse = useGetList();
   const [search, setSearch] = React.useState('');
+  const {data, error, loading, refetch}: QueryResponse = useGetList({
+    variables: {search},
+  });
 
   const renderLoading = () => {
     return (
@@ -25,24 +28,29 @@ const List: React.FC<Props> = ({}: any) => {
     );
   };
 
+  React.useEffect(() => {
+    console.log('search', search);
+    refetch({search});
+  }, [search, refetch]);
+
   return (
     <Container>
-      {!(data && Object.keys(data).length > 0) && loading && renderLoading()}
+      <TextInput
+        style={styles.searchInput}
+        value={search}
+        onChangeText={(text) => setSearch(text)}
+        placeholder="Search name"
+      />
       {data && (
-        <View>
-          <TextInput
-            style={styles.searchInput}
-            value={search}
-            onChangeText={(text) => setSearch(text)}
-            placeholder="Search name"
-          />
-          <FlatList
-            data={[...data.starships, ...data.persons, ...data.planets]}
-            renderItem={({item}: {item: Entity}) => <Item item={item} />}
-            keyExtractor={(item, index) => index + ''}
-          />
-        </View>
+        <FlatList
+          style={{flex: 1}}
+          data={[...data.starships, ...data.persons, ...data.planets]}
+          renderItem={({item}: {item: Entity}) => <Item item={item} />}
+          keyExtractor={(item, index) => index + ''}
+        />
       )}
+      {loading && renderLoading()}
+      {error && <Text>An error occured</Text>}
     </Container>
   );
 };

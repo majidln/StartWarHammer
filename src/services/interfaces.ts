@@ -17,4 +17,5 @@ export interface QueryResponse {
   data: ResponsePage | undefined;
   loading: Boolean;
   error: Object | undefined;
+  refetch: Function;
 }
