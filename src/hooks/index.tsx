@@ -17,7 +17,7 @@ export const GET_LIST = gql`
   }
 `;
 
-const GET_STARSHIP_DETAIL = gql`
+export const GET_STARSHIP_DETAIL = gql`
   query getStarshipDetail($id: ID) {
     starship(where: {id: $id}) {
       name
